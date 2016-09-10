@@ -10,5 +10,5 @@ require_relative 'printer'
 
 store = Store.new
 printer = Printer.new
-# printer.print_inventory(store.inventory)
-printer.print_menu(store.menu)
+printer.print_inventory(store.inventory)
+printer.print_menu(store, store.menu)
