@@ -11,8 +11,9 @@ class Printer
     puts "Menu:"
     menu.each do |drink|
       puts "#{item.name.capitalize},#{quantity}"
-    ends
+    end
   end
+
 end
 
 # # Menu:
