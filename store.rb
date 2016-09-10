@@ -10,7 +10,7 @@ class Store
     { Ingredient::COCOA => 10,
       Ingredient::COFFEE => 10,
       Ingredient::CREAM => 10,
-      Ingredient::DECAF_COFEE => 10,
+      Ingredient::DECAF_COFFEE => 10,
       Ingredient::ESPRESSO => 10,
       Ingredient::FOAMED_MILK => 10,
       Ingredient::STEAMED_MILK => 10,
@@ -22,7 +22,7 @@ class Store
       [ Drink.new({name: "cafe americano",ingredients: {Ingredient::ESPRESSO => 3}}),
       Drink.new({name: "caffe latte",ingredients: {Ingredient::ESPRESSO => 2, Ingredient::STEAMED_MILK => 1}}),
       Drink.new({name: "caffe mocha",ingredients: {Ingredient::ESPRESSO => 1,Ingredient::STEAMED_MILK => 1, Ingredient::COCOA => 1, Ingredient::WHIPPED_CREAM => 1}}),
-      Drink.new({name: "cappuccino",ingredients: {Ingredient::ESPRESSO => 2,Ingredient::STEAMED_MILK => 1, Ingredient::FOAMED_MILK => 1}})
+      Drink.new({name: "cappuccino",ingredients: {Ingredient::ESPRESSO => 2,Ingredient::STEAMED_MILK => 1, Ingredient::FOAMED_MILK => 1}}),
       Drink.new({name: "coffee",ingredients: {Ingredient::COFFEE => 1,Ingredient::SUGAR => 1, Ingredient::CREAM => 1}}),
       Drink.new({name: "decaf coffee",ingredients: {Ingredient::DECAF_COFFEE => 3,Ingredient::SUGAR => 1, Ingredient::CREAM => 1}}),
       ]
