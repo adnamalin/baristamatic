@@ -3,14 +3,16 @@ class Printer
   def print_inventory(inventory)
     puts "Inventory:"
     inventory.each do |item, quantity|
-      puts "#{item.name.capitalize},#{quantity}"
+      puts "#{item[:name].capitalize},#{quantity}"
     end
   end
 
   def print_menu(menu)
+    counter = 1
     puts "Menu:"
     menu.each do |drink|
-      puts "#{item.name.capitalize},#{quantity}"
+      puts "#{counter}, #{drink.name.capitalize}, $#{drink.cost}"
+      counter += 1
     end
   end
 
