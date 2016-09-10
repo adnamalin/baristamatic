@@ -39,6 +39,15 @@ RSpec.describe Store do
       store.inventory[{name: "coffee", unit_cost: 0.75}] = 2
       expect(store.in_stock?(coffee)).to eq false
     end
+
+  end
+
+  describe 'remove inventory after drink order' do
+    it 'changes inventory to reflect subtracted ingredients' do
+      store.inventory[{name: "coffee", unit_cost: 0.75}] = 10
+      store.remove_from_inventory(coffee)
+      expect(store.inventory[Ingredient::COFFEE]).to eq 7
+    end
   end
 
 end

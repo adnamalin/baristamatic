@@ -39,11 +39,18 @@ class Store
     true
   end
 
+  def remove_from_inventory(drink)
+    drink.ingredients.each do |i, q|
+      inventory[i] -= q
+    end
+  end
+
 end
 
 # store = Store.new
-
+#
 # coffee = Drink.new({name: "coffee",ingredients: {Ingredient::COFFEE => 3,Ingredient::SUGAR => 1, Ingredient::CREAM => 1}})
 #  coffee.ingredients
 #
-# p store.in_stock?(coffee)
+# store.remove_from_inventory(coffee)
+# p store.inventory
