@@ -23,7 +23,7 @@ class Store
       Drink.new({name: "caffe latte",ingredients: {Ingredient::ESPRESSO => 2, Ingredient::STEAMED_MILK => 1}}),
       Drink.new({name: "caffe mocha",ingredients: {Ingredient::ESPRESSO => 1,Ingredient::STEAMED_MILK => 1, Ingredient::COCOA => 1, Ingredient::WHIPPED_CREAM => 1}}),
       Drink.new({name: "cappuccino",ingredients: {Ingredient::ESPRESSO => 2,Ingredient::STEAMED_MILK => 1, Ingredient::FOAMED_MILK => 1}}),
-      Drink.new({name: "coffee",ingredients: {Ingredient::COFFEE => 1,Ingredient::SUGAR => 1, Ingredient::CREAM => 1}}),
+      Drink.new({name: "coffee",ingredients: {Ingredient::COFFEE => 3,Ingredient::SUGAR => 1, Ingredient::CREAM => 1}}),
       Drink.new({name: "decaf coffee",ingredients: {Ingredient::DECAF_COFFEE => 3,Ingredient::SUGAR => 1, Ingredient::CREAM => 1}}),
       ]
 
@@ -32,4 +32,18 @@ class Store
     @menu = args.fetch(:menu, DEFAULT_MENU)
   end
 
+  def in_stock?(drink)
+    drink.ingredients.each do |i, q|
+      return false if inventory[i] < q
+    end
+    true
+  end
+
 end
+
+# store = Store.new
+
+# coffee = Drink.new({name: "coffee",ingredients: {Ingredient::COFFEE => 3,Ingredient::SUGAR => 1, Ingredient::CREAM => 1}})
+#  coffee.ingredients
+#
+# p store.in_stock?(coffee)
