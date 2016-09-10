@@ -11,7 +11,7 @@ RSpec.describe Store do
     end
 
     it 'has menu' do
-      expect(store.menu).to be_a Hash
+      expect(store.menu).to be_a Array
     end
   end
 

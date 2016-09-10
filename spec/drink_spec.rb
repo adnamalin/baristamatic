@@ -1,8 +1,10 @@
 require_relative '../drink'
+require_relative '../ingredient'
 
 RSpec.describe Drink do
 
-  let(:coffee) { Drink.new({name: "coffee",ingredients: {"coffee" => 1,"sugar" => 1, "cream" => 1}})}
+  let(:coffee_ingredients) {{Ingredient.new("coffee", 0.75)=> 3,Ingredient.new("sugar", 0.25) => 1,   Ingredient.new("cream", 0.25) => 1}}
+  let(:coffee) { Drink.new({name: "coffee",ingredients: coffee_ingredients})}
 
   describe 'attributes' do
 
@@ -11,7 +13,7 @@ RSpec.describe Drink do
     end
 
     it 'has ingredients' do
-      expect(coffee.ingredients).to eq({"coffee" => 1,"sugar" => 1, "cream" => 1})
+      expect(coffee.ingredients).to eq(coffee_ingredients)
     end
 
   end

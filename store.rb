@@ -7,24 +7,29 @@ class Store
   attr_reader :inventory, :menu
 
   DEFAULT_INVENTORY =
-    { Ingredient.new("coffee", 0.75) => 10,
-      Ingredient.new("decalf coffee", 0.75) => 10,
-      Ingredient.new("sugar", 0.25) => 10,
-      Ingredient.new("cream", 0.25) => 10,
-      Ingredient.new("steamed milk", 0.35) => 10,
-      Ingredient.new("foamed milk", 0.35) => 10,
-      Ingredient.new("espresso", 1.10) => 10,
-      Ingredient.new("cocoa", 0.90) => 10,
-      Ingredient.new("whipped cream", 1.00)  => 10
+    { Ingredient::COFFEE => 10,
+      Ingredient::DECAF_COFEE => 10,
+      Ingredient::SUGAR => 10,
+      Ingredient::CREAM => 10,
+      Ingredient::STEAMED_MILK => 10,
+      Ingredient::FOAMED_MILK => 10,
+      Ingredient::ESPRESSO => 10,
+      Ingredient::COCOA => 10,
+      Ingredient::WHIPPED_CREAM  => 10
     }
 
     DEFAULT_MENU =
-      { 
-      }
+      [ Drink.new({name: "coffee",ingredients: {"coffee" => 1,"sugar" => 1, "cream" => 1}}),
+      Drink.new({name: "decaf coffee",ingredients: {"decaf coffee" => 3,"sugar" => 1, "cream" => 1}}),
+      Drink.new({name: "caffe latte",ingredients: {"espresso" => 2,"steamed milk" => 1}}),
+      Drink.new({name: "cafe americano",ingredients: {"espresso" => 3}}),
+      Drink.new({name: "caffe mocha",ingredients: {"espresso" => 1,"steamed milk" => 1, "cocoa" => 1, "whipped cream" => 1}}),
+      Drink.new({name: "cappuccino",ingredients: {"espresso" => 2,"steamed milk" => 1, "foamed milk" => 1}})
+      ]
 
   def initialize(args = {})
     @inventory = args.fetch(:inventory, DEFAULT_INVENTORY)
-    @menu = args.fetch(:menu, {DEFAULT_MENU})
+    @menu = args.fetch(:menu, DEFAULT_MENU)
   end
 
 end
