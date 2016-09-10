@@ -21,7 +21,7 @@ RSpec.describe Drink do
   describe 'calculates price based on unit cost of ingredients' do
 
     it '#cost' do
-      expect(coffee.cost).to eq 
+      expect(coffee.cost).to eq 2.75
     end
 
   end
