@@ -8,8 +8,8 @@ RSpec.describe Ingredient do
       expect(Ingredient::COFFEE[:unit_cost]).to eq 0.75
     end
     it 'decaf coffee details' do
-      expect(Ingredient::DECAF_COFEE[:name]).to eq 'decaf coffee'
-      expect(Ingredient::DECAF_COFEE[:unit_cost]).to eq 0.75
+      expect(Ingredient::DECAF_COFFEE[:name]).to eq 'decaf coffee'
+      expect(Ingredient::DECAF_COFFEE[:unit_cost]).to eq 0.75
     end
     it 'sugar details' do
       expect(Ingredient::SUGAR[:name]).to eq 'sugar'
