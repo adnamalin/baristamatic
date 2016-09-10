@@ -9,7 +9,7 @@ class Drink
   end
 
   def cost
-    ingredients.map{|i, q| i[:unit_cost] * q}.reduce(:+)
+    ingredients.map{|i, q| i[:unit_cost] * q}.reduce(:+).round(2)
   end
 
 end
