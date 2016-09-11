@@ -1,6 +1,10 @@
-user_selection = ""
+require_relative 'transaction'
 
-until user_selection == "quit"
+user_selection = ""
+transaction = Transaction.new()
+
+transaction.print_inventory_and_menu
+until user_selection == "q" || user_selection == "Q"
   user_selection = STDIN.gets.chomp
-  STDOUT.write(user_selection + "\n")
+  transaction.run_order(user_selection)
 end
