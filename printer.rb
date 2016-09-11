@@ -7,10 +7,10 @@ class Printer
     end
   end
 
-  def print_menu(store, menu)
+  def print_menu(store)
     counter = 1
     puts "Menu:"
-    menu.each do |drink|
+    store.menu.each do |drink|
       puts "#{counter}, #{drink.name.capitalize}, $#{drink.cost}, #{store.in_stock?(drink)} "
       counter += 1
     end

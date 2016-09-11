@@ -50,7 +50,7 @@ class Store
 
 end
 
-# store = Store.new
+store = Store.new
 #
 # coffee = Drink.new({name: "coffee",ingredients: {Ingredient::COFFEE => 3,Ingredient::SUGAR => 1, Ingredient::CREAM => 1}})
 #  coffee.ingredients
@@ -58,3 +58,6 @@ end
 # p store.inventory
 # store.restock_inventory
 # p store.inventory
+
+# counter = 1
+# p store.menu.map{ |item| [counter.to_s, item] }.to_h
