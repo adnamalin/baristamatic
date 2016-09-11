@@ -50,4 +50,11 @@ RSpec.describe Store do
     end
   end
 
+  describe 'restocks inventory' do
+    it 'changes inventory quantities to 10' do
+      store.restock_inventory
+      expect(store.inventory.values.all?{|q| q== 10}).to eq true
+    end
+  end
+
 end

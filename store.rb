@@ -4,7 +4,8 @@ require_relative 'ingredient'
 
 class Store
 
-  attr_reader :inventory, :menu
+  attr_reader :menu
+  attr_accessor :inventory
 
   DEFAULT_INVENTORY =
     { Ingredient::COCOA => 10,
@@ -40,9 +41,11 @@ class Store
   end
 
   def remove_from_inventory(drink)
-    drink.ingredients.each do |i, q|
-      inventory[i] -= q
-    end
+    drink.ingredients.each {|i, q| inventory[i] -= q}
+  end
+
+  def restock_inventory
+    inventory.each {|i, q| inventory[i] = 10}
   end
 
 end
@@ -51,6 +54,7 @@ end
 #
 # coffee = Drink.new({name: "coffee",ingredients: {Ingredient::COFFEE => 3,Ingredient::SUGAR => 1, Ingredient::CREAM => 1}})
 #  coffee.ingredients
-#
 # store.remove_from_inventory(coffee)
+# p store.inventory
+# store.restock_inventory
 # p store.inventory
