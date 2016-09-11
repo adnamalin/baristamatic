@@ -1,3 +1,6 @@
+### BaristaMatic: Command Line Coffeeshop 
+![gif-demo](http://i.imgur.com/hkiuf83.gif)
+
 ### How to Run:
 Run file runner.rb.
 - "R" or "r": restocks inventory
