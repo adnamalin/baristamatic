@@ -17,17 +17,3 @@ class Printer
   end
 
 end
-
-# # Menu:
-#
-# 1,Caffe Americano,$3.30,true
-#
-# 2,Caffe Latte,$2.55,true
-#
-# 3,Caffe Mocha,$3.35,true
-#
-# 4,Cappuccino,$2.90,true
-#
-# 5,Coffee,$2.75,true
-#
-# 6,Decaf Coffee,$2.75,true

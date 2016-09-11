@@ -1,7 +1,7 @@
 require_relative 'transaction'
 
 user_selection = ""
-transaction = Transaction.new
+transaction = Transaction.new()
 
 transaction.print_inventory_and_menu
 until user_selection == "q" || user_selection == "Q"

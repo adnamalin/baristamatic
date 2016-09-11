@@ -30,10 +30,10 @@ class Transaction
     drink = @drink_matcher[drink_num]
     if @store.in_stock?(drink)
       @store.remove_from_inventory(drink)
-      puts "Dispensing: #{drink}"
+      puts "Dispensing: #{drink.name.capitalize}"
       print_inventory_and_menu
     else
-      puts "Out of Stock: #{drink.name}"
+      puts "Out of Stock: #{drink.name.capitalize}"
     end
   end
 
